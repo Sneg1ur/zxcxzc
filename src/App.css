@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply min-w-[375px] font-poppins;
+}
+
+.slick-dots {
+  display: flex !important;
+  text-align: unset !important;
+  bottom: 0px !important;
+}
+
+.slick-dots li {
+  position: unset !important;
+  display: unset !important;
+  height: unset !important;
+  margin: unset !important;
+  padding: unset !important;
+  cursor: unset !important;
+}
+
+.slick-dots:has(.hero-slider-dots) {
+  position: relative !important;
+  @apply top-16 items-center justify-center gap-1 px-4 md:top-20;
+}
+
+.slick-dots:has(.hero-slider-dots) li {
+  width: 16% !important;
+  @apply sm:w-[5.5rem] !important;
+}
+
+.slick-dots:has(.hero-slider-dots) > .slick-active div {
+  @apply bg-yellowPrimary;
+}
+
+.slick-dots:has(.product-slider-dots) {
+  @apply top-[105%]  h-[7.6rem] gap-8 overflow-auto bg-white  lg:left-[-8.5rem] lg:top-0 lg:h-auto lg:w-[7.6rem] lg:flex-col  lg:bg-transparent;
+}
+
+.slick-dots:has(.product-slider-dots) li {
+  @apply w-[6.5rem] flex-none  !important;
+}
+
+.slick-dots:has(.product-slider-dots) > .slick-active img {
+  @apply border-yellowPrimary;
+}
+
+.slick-list:has(.product-slider-media) {
+  @apply overflow-hidden rounded-3xl;
+}
+
+.padding-layouts {
+  @apply p-4;
+}
+
+@layer base {
+  .app-container {
+    @apply mx-auto max-w-[1350px];
+  }
+}
+
+.cards:has(.card:nth-child(1):last-child) {
+  @apply justify-center md:justify-start;
+}
+
+.card-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.active {
+  @apply border-b-2 border-b-yellowPrimary;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body:has(.not-found-container) .announcement-bar {
+  display: none;
+}
+
+body:has(.not-found-container) nav {
+  display: none;
+}
+
+body:has(.not-found-container) footer {
+  display: none;
+}
+
+body:has(.loader) .announcement-bar {
+  display: none;
+}
+
+body:has(.loader) nav {
+  display: none;
+}
+
+body:has(.loader) footer {
+  display: none;
+}
